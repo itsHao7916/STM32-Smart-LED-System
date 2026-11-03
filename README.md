@@ -254,24 +254,27 @@ LED 透過限流電阻連接 STM32 的 GPIO 腳位，並依照程式使用的輸
 ### 專案主要檔案
 
 ```text
-LED_Smart_System/
+Smart_LED_System/
 ├── Core/
 │   ├── Inc/
 │   │   ├── main.h
 │   │   ├── stm32g4xx_hal_conf.h
-│   │   └── stm32g4xx_it.h
-│   ├── Src/
-│   │   ├── main.c
-│   │   ├── stm32g4xx_hal_msp.c
-│   │   ├── stm32g4xx_it.c
-│   │   ├── syscalls.c
-│   │   ├── sysmem.c
-│   │   └── system_stm32g4xx.c
-│   └── Startup/
+│   │   ├── stm32g4xx_it.h
+│   │   └── stm32g4xx_nucleo_conf.h
+│   │
+│   └── Src/
+│       ├── main.c
+│       ├── stm32g4xx_hal_msp.c
+│       ├── stm32g4xx_it.c
+│       ├── syscalls.c
+│       ├── sysmem.c
+│       └── system_stm32g4xx.c
+│
+├── Startup/
 ├── Drivers/
 ├── Debug/
-├── LED_Smart_System.ioc
-├── LED_Smart_System Debug.launch
+├── Smart_LED_System.ioc
+├── Smart_LED_System Debug.launch
 ├── STM32G474RETX_FLASH.ld
 └── STM32G474RETX_RAM.ld
 ```
@@ -283,17 +286,18 @@ LED_Smart_System/
 | `Core/Inc/main.h` | GPIO 腳位定義及主要標頭檔 |
 | `Core/Inc/stm32g4xx_hal_conf.h` | STM32 HAL Library 的設定檔 |
 | `Core/Inc/stm32g4xx_it.h` | 中斷服務程式相關宣告 |
+| `Core/Inc/stm32g4xx_nucleo_conf.h` | NUCLEO 開發板支援設定檔 |
 | `Core/Src/main.c` | 系統主程式、LED 控制、PWM 呼吸、隨機判斷及按鈕處理 |
 | `Core/Src/stm32g4xx_hal_msp.c` | STM32 周邊底層初始化設定 |
 | `Core/Src/stm32g4xx_it.c` | STM32 中斷服務程式 |
 | `Core/Src/syscalls.c` | 系統呼叫介面 |
 | `Core/Src/sysmem.c` | 記憶體管理相關功能 |
 | `Core/Src/system_stm32g4xx.c` | STM32 系統時脈及核心設定 |
-| `Core/Startup/` | MCU 啟動程式 |
+| `Startup/` | MCU 啟動程式 |
 | `Drivers/` | STM32 HAL 與 CMSIS 驅動程式 |
 | `Debug/` | 編譯後產生的除錯及執行檔案 |
-| `LED_Smart_System.ioc` | STM32CubeMX 腳位與周邊設定 |
-| `LED_Smart_System Debug.launch` | STM32CubeIDE 除錯啟動設定 |
+| `Smart_LED_System.ioc` | STM32CubeMX 腳位與周邊設定 |
+| `Smart_LED_System Debug.launch` | STM32CubeIDE 除錯啟動設定 |
 | `STM32G474RETX_FLASH.ld` | Flash 記憶體配置 |
 | `STM32G474RETX_RAM.ld` | RAM 記憶體配置 |
 
