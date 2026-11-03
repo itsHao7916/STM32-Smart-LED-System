@@ -302,7 +302,7 @@ LED_Smart_System/
 - [主程式 main.c](Core/Src/main.c)
 - [主要標頭檔 main.h](Core/Inc/main.h)
 - [中斷服務程式 stm32g4xx_it.c](Core/Src/stm32g4xx_it.c)
-- [STM32CubeMX 設定檔](LED_Smrat_System.ioc)
+- [STM32CubeMX 設定檔](Smart_LED_System.ioc)
 
 
 ### main.c 程式架構
